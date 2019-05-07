@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+        <script>
+            let count = 2;
+            let result='';
+            let i1 = 0;
+            let i2 = 1;
+            while (true) {
+                if (count === 1) result = '0';
+                if (count === 2) result = "0 1";
+                if (count >2) {
+                    let k= i1 + i2;
+                    i1 = i2;
+                    i2 = k;
+                    result = k;
+                }
+                if (result%5 === 0) break;
+                count++;
+            } document.write(result);
+        </script>
+</body>
+</html>

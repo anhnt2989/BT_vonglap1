@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+        <script>
+            let n = 20;
+            let result='';
+            let i1=0;
+            let i2=1;
+            let sum=0;
+            let count =1;
+            while (count <= n) {
+                if (count === 1) result = '0';
+                if (count === 2) {
+                    result = "0 1";
+                    sum = 1;
+                }
+                if (count >2) {
+                    let k = i1+i2;
+                    i1=i2;
+                    i2=k;
+                    result += " " + k;
+                    sum += k;
+                } count++;
+            }
+            document.write("Tổng 20 số đầu tiên trong dãy Fibonacci là : " + sum);
+        </script>
+</body>
+</html>

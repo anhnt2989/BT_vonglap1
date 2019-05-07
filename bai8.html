@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<style>
+    p {
+        text-align: center;
+    }
+</style>
+<h1 style="text-align: center">Hãy thử đoán xem !!!</h1>
+<p>Nhập vào 1 khoảng số từ 0-10 (khoảng số phải lớn hơn 3 số hạng)</p>
+<p>Chương trình sẽ chọn 1 số ngẫu nhiên và so sánh với số bạn đã chọn</p>
+<p>Lưu ý : Bạn được chọn số tối đa 3 lần !!!</p>
+<body>
+<input type="button" value="Start" style="position:absolute;left: 680px" onclick="play();">
+        <script>
+            function play() {
+                let fromx = parseInt(prompt("Nhập vào khoảng số bạn muốn đoán (từ) :" ));
+                let tox = parseInt(prompt("Nhập vào khoảng số bạn muốn đoán (đến) :"));
+                let choose = parseInt(prompt("Nhập vào số bạn chọn :"));
+                let count=0;
+                let result = parseInt(Math.random() * (tox-fromx) + fromx);
+                console.log(result);
+                do {
+                    if (choose === result) {
+                        alert("Chúc mừng! Bạn đã trúng số!!!");
+                        break;
+                    } else {
+                        if (count === 3) {
+                            alert("Rất tiếc! Bạn đã chọn sai 3 lần! Chúc may mắn lần sau!");
+                            break;
+                        } else {
+                            if (choose > result) {
+                                choose = parseInt(prompt("Số bạn chọn lớn hơn kết quả 1 chút, hãy thử lại!"));
+                            } else if (choose < result) {
+                                choose =parseInt(prompt("Số bạn chọn nhỏ hơn kết quả 1 chút, hãy thử lại!"));
+                            }
+                            count++;
+                            // console.log(count);
+                        }
+                    }
+                } while (count<=3);
+            }
+        </script>
+</body>
+</html>

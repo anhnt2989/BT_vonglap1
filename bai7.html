@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+        <script>
+            let numb;
+            for (numb=1;numb<=100;numb++) {
+                if (numb % 3 == 0 && numb%5!==0) {
+                    document.write("Fizz" + "<br>");
+                } else if (numb % 5 ==0 && numb%3!==0) {
+                    document.write("Buzz" + "<br>");
+                } else if (numb%3==0 && numb%5==0) {
+                    document.write("FizzBuzz" + "<br>");
+                } else {
+                    document.write(numb + "<br>");
+                }
+            }
+        </script>
+</body>
+</html>
